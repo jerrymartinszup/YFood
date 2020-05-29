@@ -1,10 +1,9 @@
-
 server:
   port: 8000
 spring:
   resources:
     add-mappings: true
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/yfood_db_dev?currentSchema=yfood_db_dev
-    username: yfood_db@dev
-    password: yfood_db_dev
+    url: r2dbc:postgresql://localhost/yfood_db?schema=yfood
+    username: yfood_db@
+    password: yfood_db

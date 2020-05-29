@@ -8,9 +8,9 @@ services:
     ports:
       - "5432:5432"
     environment:
-      - POSTGRES_DB=yfood_db_dev
-      - POSTGRES_USER=yfood_db@dev
-      - POSTGRES_PASSWORD=yfood_db_dev
+      - POSTGRES_DB=yfood_db
+      - POSTGRES_USER=yfood_db@
+      - POSTGRES_PASSWORD=yfood_db
       - MAX_CONNECTIONS=300
     networks:
       - db
