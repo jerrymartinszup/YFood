@@ -6,6 +6,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.data.annotation.Id;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Setter
@@ -16,8 +18,10 @@ public class Restaurant {
     @Id
     private Long id;
 
-    private String email;
+    @NotBlank
+    private String name;
 
+    @Size(min = 1, message = "restaurante deve aceitar pelo menos uma forma de pagamento")
     private Set<PaymentTypeEnum> paymentsTypesAccepts;
 
     public Set<PaymentTypeEnum> getPaymentsTypesAccepts() {

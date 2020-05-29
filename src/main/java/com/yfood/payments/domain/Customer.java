@@ -3,6 +3,8 @@ package com.yfood.payments.domain;
 import lombok.*;
 import org.springframework.data.annotation.Id;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 import java.util.Set;
 
 @Setter
@@ -13,11 +15,13 @@ public class Customer {
     @Id
     private Long id;
 
+    @Email(message = "e-mail invalido")
     private String email;
 
+    @Size(min = 1, message = "cliente deve ter pelo menos uma forma de pagamento")
     private Set<PaymentTypeEnum> paymentsTypes;
 
-    public Set<PaymentTypeEnum> getPaymentsTypes() {
+    public Set<PaymentTypeEnum> getPaymentsTypesAccepts() {
         return paymentsTypes;
     }
 }
