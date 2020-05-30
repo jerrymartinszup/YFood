@@ -1,0 +1,9 @@
+server:
+  port: 8000
+spring:
+  resources:
+    add-mappings: true
+  r2dbc:
+    url: r2dbc:postgresql://localhost/yfood_db?schema=yfood
+    username: yfood_db@
+    password: yfood_db

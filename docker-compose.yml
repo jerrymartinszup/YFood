@@ -1,0 +1,16 @@
+version: '3'
+networks:
+  db:
+services:
+  postgres:
+    container_name: yfood_db
+    image: postgres:10.5
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=yfood_db
+      - POSTGRES_USER=yfood_db@
+      - POSTGRES_PASSWORD=yfood_db
+      - MAX_CONNECTIONS=300
+    networks:
+      - db
