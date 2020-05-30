@@ -23,8 +23,4 @@ public class Restaurant {
 
     @Size(min = 1, message = "restaurante deve aceitar pelo menos uma forma de pagamento")
     private Set<PaymentType> paymentsTypesAccepts;
-
-    public Set<PaymentType> getPaymentsTypesAccepts() {
-        return paymentsTypesAccepts;
-    }
 }
