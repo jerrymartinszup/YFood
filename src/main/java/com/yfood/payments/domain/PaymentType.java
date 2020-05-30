@@ -2,7 +2,7 @@ package com.yfood.payments.domain;
 
 import lombok.Getter;
 
-public enum PaymentTypeEnum {
+public enum PaymentType {
     VISA("cartão visa", true),
     MASTERCARD("cartão mastercard", true),
     MONEY("dinheiri", false),
@@ -15,7 +15,7 @@ public enum PaymentTypeEnum {
     @Getter
     private final boolean isOnline;
 
-    PaymentTypeEnum(final String description, final boolean isOnline) {
+    PaymentType(final String description, final boolean isOnline) {
         this.description = description;
         this.isOnline = isOnline;
     }

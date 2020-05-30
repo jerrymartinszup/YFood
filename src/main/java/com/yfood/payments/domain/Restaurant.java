@@ -22,9 +22,9 @@ public class Restaurant {
     private String name;
 
     @Size(min = 1, message = "restaurante deve aceitar pelo menos uma forma de pagamento")
-    private Set<PaymentTypeEnum> paymentsTypesAccepts;
+    private Set<PaymentType> paymentsTypesAccepts;
 
-    public Set<PaymentTypeEnum> getPaymentsTypesAccepts() {
+    public Set<PaymentType> getPaymentsTypesAccepts() {
         return paymentsTypesAccepts;
     }
 }

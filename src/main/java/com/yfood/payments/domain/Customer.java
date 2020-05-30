@@ -19,9 +19,9 @@ public class Customer {
     private String email;
 
     @Size(min = 1, message = "cliente deve ter pelo menos uma forma de pagamento")
-    private Set<PaymentTypeEnum> paymentsTypes;
+    private Set<PaymentType> paymentsTypes;
 
-    public Set<PaymentTypeEnum> getPaymentsTypesAccepts() {
+    public Set<PaymentType> getPaymentsTypesAccepts() {
         return paymentsTypes;
     }
 }
